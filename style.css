@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Pacifico&family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Mulish&family=Pacifico&family=VT323&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+nav {
+  background-color: blueviolet;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-size: 6vh;
+  font-family: "Mulish", sans-serif;
+  font-family: "Pacifico", cursive;
+  /* font-family: 'VT323', monospace; */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+.gamecontainer {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+}
+.box{
+    border: 3px solid rgb(42, 22, 44);
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box:hover{
+    background-color:rgb(181, 173, 188);
+}
+
+.gameinfo{
+    margin: 1rem;
+    font-family: 'Fredoka One', cursive;  
+}
+
+.info{
+    margin: 1rem;
+    font-size: x-large;
+}
+
+#reset{
+    height: 2rem;
+    width: 4rem;
+    border-radius: 9px;
+    font-size: medium;
+    background-color: rgb(22, 149, 85);
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+#reset:hover{
+    color: black;
+}
+#reset:active{
+    background-color: brown;
+    color: aliceblue;
+}
+.img img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+@media screen and (max-width: 900px){
+    .container{
+        flex-wrap: wrap;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    .gamecontainer { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
